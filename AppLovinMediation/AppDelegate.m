@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface AppDelegate ()
 
@@ -15,7 +16,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [ALSdk shared].mediationProvider = @"max";
+    [ALSdk shared].userIdentifier = @"SOME_USER_ID";
+    [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration *configuration) {
+        NSLog(@"=============== AppLovin SDK Initialized ===============");
+    }];
+    
     return YES;
 }
 

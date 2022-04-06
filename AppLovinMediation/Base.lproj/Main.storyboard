@@ -1,24 +1,137 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleAspectFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jdM-KR-x64">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
+                                <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odw-Mi-Am1">
+                                <rect key="frame" x="20" y="426" width="374" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Banner">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.17489851459288075" blue="0.17523028666329155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressBannerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dla-l9-gZu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-Eg-neX">
+                                <rect key="frame" x="20" y="489" width="374" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="InFeed">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.16360712398393662" blue="0.16274780429214319" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressInFeedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Zo-Td-a0m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57x-dQ-AvW">
+                                <rect key="frame" x="20" y="565" width="374" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Interstitial">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.25819232406983994" blue="0.205451906193998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressInterstitialButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cK4-os-48A"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AA6-MF-oKH">
+                                <rect key="frame" x="20" y="360" width="374" height="37"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Medium Rect">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.30547247698592872" blue="0.29330758985145722" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="pressMediumRectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYJ-xr-UeY"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="QM4-Eg-neX" firstAttribute="top" secondItem="odw-Mi-Am1" secondAttribute="bottom" constant="26" id="3Sl-nP-AGi"/>
+                            <constraint firstItem="odw-Mi-Am1" firstAttribute="leading" secondItem="QM4-Eg-neX" secondAttribute="leading" id="Brz-NY-TIC"/>
+                            <constraint firstItem="jdM-KR-x64" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8u-ok-ucB"/>
+                            <constraint firstItem="odw-Mi-Am1" firstAttribute="trailing" secondItem="QM4-Eg-neX" secondAttribute="trailing" id="QJZ-CG-aCk"/>
+                            <constraint firstItem="AA6-MF-oKH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qw7-cR-def"/>
+                            <constraint firstItem="AA6-MF-oKH" firstAttribute="trailing" secondItem="odw-Mi-Am1" secondAttribute="trailing" id="TId-Qj-Cme"/>
+                            <constraint firstItem="QM4-Eg-neX" firstAttribute="leading" secondItem="57x-dQ-AvW" secondAttribute="leading" id="YVe-PD-orB"/>
+                            <constraint firstItem="AA6-MF-oKH" firstAttribute="leading" secondItem="odw-Mi-Am1" secondAttribute="leading" id="ZUV-IC-1Ew"/>
+                            <constraint firstItem="AA6-MF-oKH" firstAttribute="centerX" secondItem="jdM-KR-x64" secondAttribute="centerX" id="bDl-bq-MfF"/>
+                            <constraint firstItem="57x-dQ-AvW" firstAttribute="top" secondItem="QM4-Eg-neX" secondAttribute="bottom" constant="39" id="hM2-3F-BvN"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="57x-dQ-AvW" secondAttribute="bottom" constant="134" id="i39-4E-SpM"/>
+                            <constraint firstItem="QM4-Eg-neX" firstAttribute="trailing" secondItem="57x-dQ-AvW" secondAttribute="trailing" id="oQd-o8-bnu"/>
+                            <constraint firstItem="jdM-KR-x64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pkl-Pg-luU"/>
+                            <constraint firstItem="jdM-KR-x64" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxS-fk-gLI"/>
+                            <constraint firstItem="odw-Mi-Am1" firstAttribute="top" secondItem="AA6-MF-oKH" secondAttribute="bottom" constant="29" id="z9T-CF-hJI"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="adContainer" destination="jdM-KR-x64" id="f8Q-vL-5TV"/>
+                        <outlet property="bannerButton" destination="odw-Mi-Am1" id="rKH-Wk-vWs"/>
+                        <outlet property="inFeedButton" destination="QM4-Eg-neX" id="2rY-3L-eVv"/>
+                        <outlet property="interstitialButton" destination="57x-dQ-AvW" id="jUF-cf-y0n"/>
+                        <outlet property="mRectButton" destination="AA6-MF-oKH" id="hnr-z0-16j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="65.217391304347828"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="secondarySystemFillColor">
+            <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
