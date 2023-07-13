@@ -1,2 +1,2 @@
 ${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks.sh
-${PODS_ROOT}/DIOSDK/DIOSDK.framework
+${PODS_XCFRAMEWORKS_BUILD_DIR}/DIOSDK/DIOSDK.framework/DIOSDK

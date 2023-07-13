@@ -19,8 +19,9 @@
 		};
 		D6871F80A363FF4283E6794B6217A0D4 /* DIOSDK */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 46EFF9A04FB4F0B67C1889DA52BBC323 /* Build configuration list for PBXAggregateTarget "DIOSDK" */;
+			buildConfigurationList = 79F05FB076729C05FEC14000360B8627 /* Build configuration list for PBXAggregateTarget "DIOSDK" */;
 			buildPhases = (
+				B7BE7A2F15B5A1EFDE3A00EECB2EAA2E /* [CP] Copy XCFrameworks */,
 			);
 			dependencies = (
 			);
@@ -35,14 +36,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		A7C16A0868133B4A822552B357ECCC6C /* PBXContainerItemProxy */ = {
+		B8A7E479887C04F8B47881BDC0026592 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = D6871F80A363FF4283E6794B6217A0D4;
 			remoteInfo = DIOSDK;
 		};
-		A8BAC397EE49D282D481A0D9AF9B6441 /* PBXContainerItemProxy */ = {
+		ED619A0FFFB280F693855C33AC0DF16E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -57,22 +58,24 @@
 		1140CC8CEED2BFF892C47B643EAC5E61 /* Pods-AppLovinMediation-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppLovinMediation-acknowledgements.plist"; sourceTree = "<group>"; };
 		1BD23A0ABFA13EAC4F6D3E38DD7D5B3D /* Pods-AppLovinMediation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AppLovinMediation-umbrella.h"; sourceTree = "<group>"; };
 		26F386139E0913FDE4217701851FD9D5 /* AppLovinSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppLovinSDK.debug.xcconfig; sourceTree = "<group>"; };
+		2839E6D498E2EA955A60437D09124595 /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.10.1/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		3C2D5589B393BD28ED4EA3781B95C395 /* Pods-AppLovinMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppLovinMediation.release.xcconfig"; sourceTree = "<group>"; };
-		41B5D78FB6A72568E15A85FFDFA405DB /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.3.2/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
-		58B686BA1B68EC3BD99AA76337A82057 /* DIOSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIOSDK.debug.xcconfig; sourceTree = "<group>"; };
-		5E5FB434B36D75BED471DE7F9C4FE9EB /* DIOSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DIOSDK.framework; sourceTree = "<group>"; };
+		5C4617D0F9A6658D1E7FC46FA1AD5444 /* AppLovinSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = AppLovinSDK.xcframework; path = "applovin-ios-sdk-11.10.1/AppLovinSDK.xcframework"; sourceTree = "<group>"; };
+		68EED1996C8F5B1D648CAC997C960135 /* OMSDK-Static_Displayio.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = "OMSDK-Static_Displayio.xcframework"; sourceTree = "<group>"; };
+		6D695F15490DAF52367F0B50F68E3549 /* DIOSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIOSDK.release.xcconfig; sourceTree = "<group>"; };
 		6E24D037E46F74AD7A98D80033918BB8 /* Pods-AppLovinMediation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AppLovinMediation-Info.plist"; sourceTree = "<group>"; };
 		6F9836AA448DAE64D55AE3A079644AC4 /* Pods-AppLovinMediation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AppLovinMediation-dummy.m"; sourceTree = "<group>"; };
 		71054D17B7BD95F25AFC98B4238802B8 /* AppLovinSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AppLovinSDK.release.xcconfig; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		8C4113C92EA11075F3BF853E2588CFB3 /* DIOSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "DIOSDK-xcframeworks.sh"; sourceTree = "<group>"; };
 		933680797C715B353171396341AF275D /* Pods-AppLovinMediation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-AppLovinMediation.modulemap"; sourceTree = "<group>"; };
-		93564231D13D545D1E2ED37C5BB6016E /* AppLovinSDKResources.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = AppLovinSDKResources.bundle; path = "applovin-ios-sdk-11.3.2/AppLovinSDKResources.bundle"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		AB37BAE572FCF7D6EEFE886D15778EE0 /* Pods-AppLovinMediation-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AppLovinMediation-resources.sh"; sourceTree = "<group>"; };
-		BC1600F67F27C7FD373A4A3A68B8DAD3 /* DIOSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIOSDK.release.xcconfig; sourceTree = "<group>"; };
+		C03DF60381A14834B956CB058864D778 /* DIOSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DIOSDK.debug.xcconfig; sourceTree = "<group>"; };
 		C8AF39A8FBA69180CB98329753B5AB7F /* Pods-AppLovinMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AppLovinMediation.debug.xcconfig"; sourceTree = "<group>"; };
 		D0A44229C11F7A1EB60728FDEF6C017D /* Pods-AppLovinMediation-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AppLovinMediation-acknowledgements.markdown"; sourceTree = "<group>"; };
 		E235AE18AB1B9DDE4270278A2FCAC585 /* AppLovinSDK-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "AppLovinSDK-xcframeworks.sh"; sourceTree = "<group>"; };
+		FB6A619283DA18C4F44622E2345305B6 /* DIOSDK.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; path = DIOSDK.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,28 +90,12 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C2EC3F2F731F240A9788A69812E69F9 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				93564231D13D545D1E2ED37C5BB6016E /* AppLovinSDKResources.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
 		170D2266DF5C4A3963D3301E9C59EAD5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				049F7DFE4603BC7D9C9E2F45A8D171A0 /* Pods-AppLovinMediation */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		18A953655A9CE6C28C789E021EECB299 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				41B5D78FB6A72568E15A85FFDFA405DB /* AppLovinSDK.xcframework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2223EEB5E62379709E0F5F317F646629 /* Support Files */ = {
@@ -140,6 +127,14 @@
 			path = "Target Support Files/Pods-AppLovinMediation";
 			sourceTree = "<group>";
 		};
+		3F6BCB94518AB2B7C32BDE73D68BE3F2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2839E6D498E2EA955A60437D09124595 /* AppLovinSDKResources.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -148,38 +143,58 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		8154ABD85971D5D07A662A17ECF9A367 /* Frameworks */ = {
+		5C21B75EB3F16426A3A2BED9383A0DE1 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				5E5FB434B36D75BED471DE7F9C4FE9EB /* DIOSDK.framework */,
+				8C4113C92EA11075F3BF853E2588CFB3 /* DIOSDK-xcframeworks.sh */,
+				C03DF60381A14834B956CB058864D778 /* DIOSDK.debug.xcconfig */,
+				6D695F15490DAF52367F0B50F68E3549 /* DIOSDK.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DIOSDK";
+			sourceTree = "<group>";
+		};
+		62E0474101311F172804096DF6EA466E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FB6A619283DA18C4F44622E2345305B6 /* DIOSDK.xcframework */,
+				68EED1996C8F5B1D648CAC997C960135 /* OMSDK-Static_Displayio.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		84401BF005584C25BAA136E35EBDFF73 /* DIOSDK */ = {
+		740349DB30A2510DA09700C2905F8C8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8154ABD85971D5D07A662A17ECF9A367 /* Frameworks */,
-				F1A4D3CC0DDAB39EA130749CE0C9C8AA /* Support Files */,
+				5C4617D0F9A6658D1E7FC46FA1AD5444 /* AppLovinSDK.xcframework */,
 			);
-			name = DIOSDK;
-			path = DIOSDK;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		92A4981AFD97FDFD8A8718A3BF4788A4 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				B5F2D7975552BB38AF3202509F06A4DC /* AppLovinSDK */,
-				84401BF005584C25BAA136E35EBDFF73 /* DIOSDK */,
+				99A2A8BA37D374508BB22EB3084E0223 /* DIOSDK */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		99A2A8BA37D374508BB22EB3084E0223 /* DIOSDK */ = {
+			isa = PBXGroup;
+			children = (
+				62E0474101311F172804096DF6EA466E /* Frameworks */,
+				5C21B75EB3F16426A3A2BED9383A0DE1 /* Support Files */,
+			);
+			name = DIOSDK;
+			path = DIOSDK;
 			sourceTree = "<group>";
 		};
 		B5F2D7975552BB38AF3202509F06A4DC /* AppLovinSDK */ = {
 			isa = PBXGroup;
 			children = (
-				18A953655A9CE6C28C789E021EECB299 /* Frameworks */,
-				0C2EC3F2F731F240A9788A69812E69F9 /* Resources */,
+				740349DB30A2510DA09700C2905F8C8D /* Frameworks */,
+				3F6BCB94518AB2B7C32BDE73D68BE3F2 /* Resources */,
 				2223EEB5E62379709E0F5F317F646629 /* Support Files */,
 			);
 			name = AppLovinSDK;
@@ -213,16 +228,6 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F1A4D3CC0DDAB39EA130749CE0C9C8AA /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				58B686BA1B68EC3BD99AA76337A82057 /* DIOSDK.debug.xcconfig */,
-				BC1600F67F27C7FD373A4A3A68B8DAD3 /* DIOSDK.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/DIOSDK";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -249,8 +254,8 @@
 			buildRules = (
 			);
 			dependencies = (
-				EDAB335E752021F27B1D8DF50F792DFA /* PBXTargetDependency */,
-				36FE9E4C87B497A6D4A0ADAA77657864 /* PBXTargetDependency */,
+				15A1890D520FA8E4E073D5D03019AACF /* PBXTargetDependency */,
+				777F8B54CE4857B71B0145D465D8C219 /* PBXTargetDependency */,
 			);
 			name = "Pods-AppLovinMediation";
 			productName = Pods_AppLovinMediation;
@@ -263,8 +268,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1240;
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1300;
+				LastUpgradeCheck = 1300;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 13.0";
@@ -314,6 +319,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/AppLovinSDK/AppLovinSDK-xcframeworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		B7BE7A2F15B5A1EFDE3A00EECB2EAA2E /* [CP] Copy XCFrameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/DIOSDK/DIOSDK-xcframeworks-input-files.xcfilelist",
+			);
+			name = "[CP] Copy XCFrameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/DIOSDK/DIOSDK-xcframeworks-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/DIOSDK/DIOSDK-xcframeworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -328,17 +350,17 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		36FE9E4C87B497A6D4A0ADAA77657864 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = DIOSDK;
-			target = D6871F80A363FF4283E6794B6217A0D4 /* DIOSDK */;
-			targetProxy = A7C16A0868133B4A822552B357ECCC6C /* PBXContainerItemProxy */;
-		};
-		EDAB335E752021F27B1D8DF50F792DFA /* PBXTargetDependency */ = {
+		15A1890D520FA8E4E073D5D03019AACF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AppLovinSDK;
 			target = 5BC46914A3617E8E5EA6E625B5DD1684 /* AppLovinSDK */;
-			targetProxy = A8BAC397EE49D282D481A0D9AF9B6441 /* PBXContainerItemProxy */;
+			targetProxy = ED619A0FFFB280F693855C33AC0DF16E /* PBXContainerItemProxy */;
+		};
+		777F8B54CE4857B71B0145D465D8C219 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DIOSDK;
+			target = D6871F80A363FF4283E6794B6217A0D4 /* DIOSDK */;
+			targetProxy = B8A7E479887C04F8B47881BDC0026592 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -359,41 +381,6 @@
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
-		};
-		174192D295A57BD951BA06100D2BD6BE /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BC1600F67F27C7FD373A4A3A68B8DAD3 /* DIOSDK.release.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		28642C72D40E633581B188C416A55A82 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 58B686BA1B68EC3BD99AA76337A82057 /* DIOSDK.debug.xcconfig */;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
-				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
 		};
 		35D955B653E1E5CFE0B73046CB96F6AE /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -496,6 +483,41 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		53932E519F7D9986107C1192A398ACC0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D695F15490DAF52367F0B50F68E3549 /* DIOSDK.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		887CA84922BF4410C6DA6887A17CF4FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C03DF60381A14834B956CB058864D778 /* DIOSDK.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -626,15 +648,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		46EFF9A04FB4F0B67C1889DA52BBC323 /* Build configuration list for PBXAggregateTarget "DIOSDK" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				28642C72D40E633581B188C416A55A82 /* Debug */,
-				174192D295A57BD951BA06100D2BD6BE /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -649,6 +662,15 @@
 			buildConfigurations = (
 				D895361F14AFC0E6D6EF8C47DB148F94 /* Debug */,
 				35D955B653E1E5CFE0B73046CB96F6AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		79F05FB076729C05FEC14000360B8627 /* Build configuration list for PBXAggregateTarget "DIOSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				887CA84922BF4410C6DA6887A17CF4FF /* Debug */,
+				53932E519F7D9986107C1192A398ACC0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -111,7 +111,7 @@ DIOAd *dioAd;
                     break;
                 }
                 case DIOAdEventOnFailedToShow:{
-                    [delegate didFailToDisplayInterstitialAdWithError: MAAdapterError.adDisplayFailederror];
+                    [delegate didFailToDisplayInterstitialAdWithError: MAAdapterError.adDisplayFailedError];
                     break;
                 }
                 case DIOAdEventOnClicked:{
@@ -154,7 +154,7 @@ DIOAd *dioAd;
                         [delegate didDisplayAdViewAd];
                         break;
                     case DIOAdEventOnFailedToShow:{
-                        [delegate didFailToDisplayAdViewAdWithError: MAAdapterError.adDisplayFailederror];
+                        [delegate didFailToDisplayAdViewAdWithError: MAAdapterError.adDisplayFailedError];
                         break;
                     }
                     case DIOAdEventOnClicked:

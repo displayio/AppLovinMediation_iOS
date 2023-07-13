@@ -1,5 +1,5 @@
 target 'AppLovinMediation' do
   use_frameworks!
-pod 'DIOSDK', '3.5.9'
+pod 'DIOSDK', '3.7.6'
 pod 'AppLovinSDK'
 end
