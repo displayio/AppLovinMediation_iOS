@@ -22,10 +22,12 @@
 DIOAd *dioAd;
 - (void)initializeWithParameters:(id<MAAdapterInitializationParameters>)parameters completionHandler:(void (^)(MAAdapterInitializationStatus, NSString * _Nullable))completionHandler
 {
+    
+    NSString* appID =  parameters.serverParameters[@"app_id"];
     [self log: @"Initializing DIO SDK adapter... "];
     completionHandler(MAAdapterInitializationStatusInitializing, nil);
     
-    [[DIOController sharedInstance] initializeWithProperties:nil appId:@"7729" completionHandler:^{
+    [[DIOController sharedInstance] initializeWithProperties:nil appId:appID completionHandler:^{
         completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
         NSLog(@"=============== DIO SDK Initialized ===============");
     } errorHandler:^(NSError *error) {
@@ -49,7 +51,7 @@ DIOAd *dioAd;
     NSLog(@"Destroy called for adapter %@", self);
     
     @try  {
-        if (dioAd != nil) {
+        if (dioAd != nil && dioAd.impressed) {
             [dioAd finish];
             dioAd = nil;
         }

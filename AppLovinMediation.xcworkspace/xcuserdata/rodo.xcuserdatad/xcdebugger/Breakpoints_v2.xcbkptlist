@@ -14,8 +14,8 @@
             filePath = "AppLovinMediation/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "139"
-            endingLineNumber = "139"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
             landmarkName = "-loadAdViewAdForParameters:adFormat:andNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -30,8 +30,8 @@
             filePath = "AppLovinMediation/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "175"
-            endingLineNumber = "175"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
             landmarkName = "-loadAdViewAdForParameters:adFormat:andNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +94,8 @@
             filePath = "AppLovinMediation/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "97"
-            endingLineNumber = "97"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "-showInterstitialAdForParameters:andNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -110,10 +110,58 @@
             filePath = "AppLovinMediation/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "107"
-            endingLineNumber = "107"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "-showInterstitialAdForParameters:andNotify:"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B70EF63B-8C4F-4472-9DEF-2064D56A9F2F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "AppLovinMediation/DisplayIOMediationAdapter.m"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "-initializeWithParameters:completionHandler:"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B70EF63B-8C4F-4472-9DEF-2064D56A9F2F - 80bd251d211f7c72"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DisplayIOMediationAdapter initializeWithParameters:completionHandler:]"
+                  moduleName = "AppLovinMediation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodo/Desktop/iOSWork/AppLovinMediation/AppLovinMediation/DisplayIOMediationAdapter.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "104">
+               </Location>
+               <Location
+                  uuid = "B70EF63B-8C4F-4472-9DEF-2064D56A9F2F - 80bd251d211f7c53"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[DisplayIOMediationAdapter initializeWithParameters:completionHandler:]"
+                  moduleName = "AppLovinMediation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/rodo/Desktop/iOSWork/AppLovinMediation/AppLovinMediation/DisplayIOMediationAdapter.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "27"
+                  endingLineNumber = "27"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
