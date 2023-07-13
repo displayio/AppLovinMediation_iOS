@@ -50,15 +50,10 @@ DIOAd *dioAd;
 {
     NSLog(@"Destroy called for adapter %@", self);
     
-    @try  {
         if (dioAd != nil && dioAd.impressed) {
             [dioAd finish];
             dioAd = nil;
         }
-        
-    } @catch(NSException *e) {
-        NSLog(@"Failed to finish ad:  %@", e.description);
-    }
 }
 
 
