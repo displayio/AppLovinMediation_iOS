@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
 #import <AppLovinSDK/AppLovinSDK.h>
 
 @interface AppDelegate ()

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +12,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController_launch" id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,8 +21,9 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="163"/>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odw-Mi-Am1">
-                                <rect key="frame" x="20" y="426" width="374" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odw-Mi-Am1">
+                                <rect key="frame" x="20" y="444" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -38,8 +40,9 @@
                                     <action selector="pressBannerButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dla-l9-gZu"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-Eg-neX">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM4-Eg-neX">
                                 <rect key="frame" x="20" y="489" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -56,8 +59,9 @@
                                     <action selector="pressInFeedButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Zo-Td-a0m"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57x-dQ-AvW">
-                                <rect key="frame" x="20" y="565" width="374" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="57x-dQ-AvW">
+                                <rect key="frame" x="20" y="534" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -74,8 +78,9 @@
                                     <action selector="pressInterstitialButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cK4-os-48A"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AA6-MF-oKH">
-                                <rect key="frame" x="20" y="360" width="374" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AA6-MF-oKH">
+                                <rect key="frame" x="20" y="399" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
                                     <attributedString key="attributedTitle">
@@ -92,31 +97,37 @@
                                     <action selector="pressMediumRectButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hYJ-xr-UeY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b3D-wQ-9WI">
+                                <rect key="frame" x="20" y="579" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Interscroller">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.25819232406983994" blue="0.205451906193998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="interscrollerButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hj-kS-7mg"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="QM4-Eg-neX" firstAttribute="top" secondItem="odw-Mi-Am1" secondAttribute="bottom" constant="26" id="3Sl-nP-AGi"/>
-                            <constraint firstItem="odw-Mi-Am1" firstAttribute="leading" secondItem="QM4-Eg-neX" secondAttribute="leading" id="Brz-NY-TIC"/>
-                            <constraint firstItem="jdM-KR-x64" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K8u-ok-ucB"/>
-                            <constraint firstItem="odw-Mi-Am1" firstAttribute="trailing" secondItem="QM4-Eg-neX" secondAttribute="trailing" id="QJZ-CG-aCk"/>
-                            <constraint firstItem="AA6-MF-oKH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Qw7-cR-def"/>
-                            <constraint firstItem="AA6-MF-oKH" firstAttribute="trailing" secondItem="odw-Mi-Am1" secondAttribute="trailing" id="TId-Qj-Cme"/>
-                            <constraint firstItem="QM4-Eg-neX" firstAttribute="leading" secondItem="57x-dQ-AvW" secondAttribute="leading" id="YVe-PD-orB"/>
-                            <constraint firstItem="AA6-MF-oKH" firstAttribute="leading" secondItem="odw-Mi-Am1" secondAttribute="leading" id="ZUV-IC-1Ew"/>
-                            <constraint firstItem="AA6-MF-oKH" firstAttribute="centerX" secondItem="jdM-KR-x64" secondAttribute="centerX" id="bDl-bq-MfF"/>
-                            <constraint firstItem="57x-dQ-AvW" firstAttribute="top" secondItem="QM4-Eg-neX" secondAttribute="bottom" constant="39" id="hM2-3F-BvN"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="57x-dQ-AvW" secondAttribute="bottom" constant="134" id="i39-4E-SpM"/>
-                            <constraint firstItem="QM4-Eg-neX" firstAttribute="trailing" secondItem="57x-dQ-AvW" secondAttribute="trailing" id="oQd-o8-bnu"/>
-                            <constraint firstItem="jdM-KR-x64" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="pkl-Pg-luU"/>
-                            <constraint firstItem="jdM-KR-x64" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yxS-fk-gLI"/>
-                            <constraint firstItem="odw-Mi-Am1" firstAttribute="top" secondItem="AA6-MF-oKH" secondAttribute="bottom" constant="29" id="z9T-CF-hJI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="top" secondItem="jdM-KR-x64" secondAttribute="top" id="uAh-Vx-fiF"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="adContainer" destination="jdM-KR-x64" id="f8Q-vL-5TV"/>
                         <outlet property="bannerButton" destination="odw-Mi-Am1" id="rKH-Wk-vWs"/>
                         <outlet property="inFeedButton" destination="QM4-Eg-neX" id="2rY-3L-eVv"/>
+                        <outlet property="interscrollerButton" destination="b3D-wQ-9WI" id="54s-sc-Clt"/>
                         <outlet property="interstitialButton" destination="57x-dQ-AvW" id="jUF-cf-y0n"/>
                         <outlet property="mRectButton" destination="AA6-MF-oKH" id="hnr-z0-16j"/>
                     </connections>

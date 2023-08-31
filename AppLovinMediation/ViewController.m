@@ -6,6 +6,7 @@
 //
 
 #import "ViewController.h"
+#import "InterScrollerViewController.h"
 #import <AppLovinSDK/AppLovinSDK.h>
 
 
@@ -15,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *mRectButton;
 @property (weak, nonatomic) IBOutlet UIButton *inFeedButton;
 @property (weak, nonatomic) IBOutlet UIButton *interstitialButton;
+@property (weak, nonatomic) IBOutlet UIButton *interscrollerButton;
 
 @property (nonatomic, strong) MAAdView *adView;
 @property (nonatomic, strong) MAInterstitialAd *interstitialAd;
@@ -27,13 +29,11 @@ NSString *bannerID = @"6d11a7a95464e9d7";
 NSString *mRectID = @"6160e3098704539f";
 NSString *inFeedID = @"001bab17cbacdb55";
 NSString *interstitialID = @"09971374de5dc75a";
-NSString *interscrollerlID = @"7be9d187c34127d8";
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
 }
 
 - (IBAction)pressBannerButton:(id)sender {
@@ -49,6 +49,14 @@ NSString *interscrollerlID = @"7be9d187c34127d8";
 }
 - (IBAction)pressInterstitialButton:(id)sender {
     [self createInterstitialAd];
+}
+
+- (IBAction)interscrollerButtonWasPressed:(id)sender {
+    InterScrollerViewController *vc = [InterScrollerViewController new];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
+    navigationController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+    navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
+    [self presentViewController:navigationController animated:YES completion:nil];
 }
 
 - (void)createInterstitialAd
@@ -67,7 +75,7 @@ NSString *interscrollerlID = @"7be9d187c34127d8";
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: unitID];
     self.adView.delegate = self;
 
-    CGFloat height = 280;
+    CGFloat height = 250;
     CGFloat width = CGRectGetWidth(UIScreen.mainScreen.bounds);
     self.adView.frame = CGRectMake(0, 0, width, height);
     self.adView.backgroundColor = UIColor.cyanColor;
@@ -76,7 +84,7 @@ NSString *interscrollerlID = @"7be9d187c34127d8";
     // Load the ad
     [self.adView loadAd];
     self.adView.hidden = NO;
-    [self.adView startAutoRefresh];
+//    [self.adView startAutoRefresh];
 }
 
 

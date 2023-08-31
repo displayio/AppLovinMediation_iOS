@@ -15,10 +15,8 @@
 		DB6226F727FB249E009BAC58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6226F627FB249E009BAC58 /* Assets.xcassets */; };
 		DB6226FA27FB249E009BAC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6226F827FB249E009BAC58 /* LaunchScreen.storyboard */; };
 		DB6226FD27FB249E009BAC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226FC27FB249E009BAC58 /* main.m */; };
-		DB62270727FB249E009BAC58 /* AppLovinMediationTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62270627FB249E009BAC58 /* AppLovinMediationTests.m */; };
-		DB62271127FB249E009BAC58 /* AppLovinMediationUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62271027FB249E009BAC58 /* AppLovinMediationUITests.m */; };
-		DB62271327FB249E009BAC58 /* AppLovinMediationUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62271227FB249E009BAC58 /* AppLovinMediationUITestsLaunchTests.m */; };
 		DB62272127FB66C1009BAC58 /* DisplayIOMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */; };
+		DBDDAF2E2AA090D6002C720D /* InterScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,12 +52,11 @@
 		DB6226FB27FB249E009BAC58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DB6226FC27FB249E009BAC58 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		DB62270227FB249E009BAC58 /* AppLovinMediationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLovinMediationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB62270627FB249E009BAC58 /* AppLovinMediationTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLovinMediationTests.m; sourceTree = "<group>"; };
 		DB62270C27FB249E009BAC58 /* AppLovinMediationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLovinMediationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		DB62271027FB249E009BAC58 /* AppLovinMediationUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLovinMediationUITests.m; sourceTree = "<group>"; };
-		DB62271227FB249E009BAC58 /* AppLovinMediationUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppLovinMediationUITestsLaunchTests.m; sourceTree = "<group>"; };
 		DB62271F27FB66C1009BAC58 /* DisplayIOMediationAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayIOMediationAdapter.h; sourceTree = "<group>"; };
 		DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayIOMediationAdapter.m; sourceTree = "<group>"; };
+		DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterScrollerViewController.m; sourceTree = "<group>"; };
+		DBDDAF2D2AA090D6002C720D /* InterScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterScrollerViewController.h; sourceTree = "<group>"; };
 		F7B3E22B29FCC191AA6BC796 /* Pods_AppLovinMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovinMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -101,9 +98,8 @@
 		DB6226DE27FB249C009BAC58 = {
 			isa = PBXGroup;
 			children = (
+				DBDDAF2F2AA0937A002C720D /* DIOAdapterAppLovin */,
 				DB6226E927FB249C009BAC58 /* AppLovinMediation */,
-				DB62270527FB249E009BAC58 /* AppLovinMediationTests */,
-				DB62270F27FB249E009BAC58 /* AppLovinMediationUITests */,
 				DB6226E827FB249C009BAC58 /* Products */,
 				BE04331F8A67C5EDAA3342E7 /* Pods */,
 				DBF76D123FA02F52D7C3E2BC /* Frameworks */,
@@ -129,9 +125,9 @@
 				DB6226EE27FB249C009BAC58 /* SceneDelegate.m */,
 				DB6226F027FB249C009BAC58 /* ViewController.h */,
 				DB6226F127FB249C009BAC58 /* ViewController.m */,
+				DBDDAF2D2AA090D6002C720D /* InterScrollerViewController.h */,
+				DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */,
 				DB6226F327FB249C009BAC58 /* Main.storyboard */,
-				DB62271F27FB66C1009BAC58 /* DisplayIOMediationAdapter.h */,
-				DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */,
 				DB6226F627FB249E009BAC58 /* Assets.xcassets */,
 				DB6226F827FB249E009BAC58 /* LaunchScreen.storyboard */,
 				DB6226FB27FB249E009BAC58 /* Info.plist */,
@@ -140,21 +136,13 @@
 			path = AppLovinMediation;
 			sourceTree = "<group>";
 		};
-		DB62270527FB249E009BAC58 /* AppLovinMediationTests */ = {
+		DBDDAF2F2AA0937A002C720D /* DIOAdapterAppLovin */ = {
 			isa = PBXGroup;
 			children = (
-				DB62270627FB249E009BAC58 /* AppLovinMediationTests.m */,
+				DB62271F27FB66C1009BAC58 /* DisplayIOMediationAdapter.h */,
+				DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */,
 			);
-			path = AppLovinMediationTests;
-			sourceTree = "<group>";
-		};
-		DB62270F27FB249E009BAC58 /* AppLovinMediationUITests */ = {
-			isa = PBXGroup;
-			children = (
-				DB62271027FB249E009BAC58 /* AppLovinMediationUITests.m */,
-				DB62271227FB249E009BAC58 /* AppLovinMediationUITestsLaunchTests.m */,
-			);
-			path = AppLovinMediationUITests;
+			path = DIOAdapterAppLovin;
 			sourceTree = "<group>";
 		};
 		DBF76D123FA02F52D7C3E2BC /* Frameworks */ = {
@@ -360,6 +348,7 @@
 				DB62272127FB66C1009BAC58 /* DisplayIOMediationAdapter.m in Sources */,
 				DB6226F227FB249C009BAC58 /* ViewController.m in Sources */,
 				DB6226EC27FB249C009BAC58 /* AppDelegate.m in Sources */,
+				DBDDAF2E2AA090D6002C720D /* InterScrollerViewController.m in Sources */,
 				DB6226FD27FB249E009BAC58 /* main.m in Sources */,
 				DB6226EF27FB249C009BAC58 /* SceneDelegate.m in Sources */,
 			);
@@ -369,7 +358,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB62270727FB249E009BAC58 /* AppLovinMediationTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,8 +365,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DB62271327FB249E009BAC58 /* AppLovinMediationUITestsLaunchTests.m in Sources */,
-				DB62271127FB249E009BAC58 /* AppLovinMediationUITests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
