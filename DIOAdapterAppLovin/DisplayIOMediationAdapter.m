@@ -110,11 +110,12 @@ DIOAd *dioAd;
                     [delegate didClickInterstitialAd];
                     break;
                 }
-                case DIOAdEventOnClosed:{
+                case DIOAdEventOnClosed:
+                case DIOAdEventOnAdCompleted:{
                     [delegate didHideInterstitialAd];
                     break;
                 }
-                case DIOAdEventOnAdCompleted:
+                
                 case DIOAdEventOnSwipedOut:
                 case DIOAdEventOnSnapped:
                 case DIOAdEventOnMuted:
