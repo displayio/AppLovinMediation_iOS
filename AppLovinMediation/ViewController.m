@@ -8,6 +8,7 @@
 #import "ViewController.h"
 #import "InterScrollerViewController.h"
 #import <AppLovinSDK/AppLovinSDK.h>
+#import <DIOSDK/DIOController.h>
 
 
 @interface ViewController ()<MAAdViewAdDelegate, MAAdDelegate>
@@ -34,6 +35,13 @@ NSString *interstitialID = @"09971374de5dc75a";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    NSString* appID = @"7729";
+//    [[DIOController sharedInstance] initializeWithProperties:nil appId:appID completionHandler:^{
+//        NSLog(@"DIO SDK Initialized");
+//    } errorHandler:^(NSError *error) {
+//        NSLog(@"DIO SDK Initialization Fail");
+//    }];
 }
 
 - (IBAction)pressBannerButton:(id)sender {
