@@ -1,12 +1,13 @@
 
 
+#import "ViewController.h"
 #import "InterScrollerViewController.h"
 #import <DIOSDK/DIOController.h>
 #import <DIOSDK/DIOInterscrollerView.h>
 #import <AppLovinSDK/AppLovinSDK.h>
 
 
-static NSString *const interscrollerlID = @"7be9d187c34127d8";
+static NSString *const interscrollerlID = @"33df6d2f311a2004";
 
 @interface InterScrollerViewController () <MAAdViewAdDelegate>
 
@@ -39,6 +40,7 @@ static NSString *const interscrollerlID = @"7be9d187c34127d8";
     //must be set for ad unit at the AppLovin dashboard
     [self.adView stopAutoRefresh];
     // Load the ad
+    [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
     [self.adView loadAd];
     self.adView.hidden = NO;
 }

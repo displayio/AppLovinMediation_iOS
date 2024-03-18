@@ -6,9 +6,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AppLovinSDK/AppLovinSDK.h>
 
 @interface ViewController : UIViewController
 
++ (void)addCustomAdRequestDataForInterstitial:(nullable MAInterstitialAd *) interstitialAd forAdView:(nullable MAAdView *) adView;
 
 @end
 

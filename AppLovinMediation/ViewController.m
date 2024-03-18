@@ -7,7 +7,6 @@
 
 #import "ViewController.h"
 #import "InterScrollerViewController.h"
-#import <AppLovinSDK/AppLovinSDK.h>
 #import <DIOSDK/DIOController.h>
 
 
@@ -26,22 +25,15 @@
 
 @implementation ViewController
 
-NSString *bannerID = @"6d11a7a95464e9d7";
-NSString *mRectID = @"6160e3098704539f";
-NSString *inFeedID = @"001bab17cbacdb55";
-NSString *interstitialID = @"09971374de5dc75a";
+NSString *bannerID = @"e37f5572855feab1";
+NSString *mRectID = @"be4c536771ef3142";
+NSString *inFeedID = @"fce17514958843dd";
+NSString *interstitialID = @"88a2c8359162b418";
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-//    NSString* appID = @"7729";
-//    [[DIOController sharedInstance] initializeWithProperties:nil appId:appID completionHandler:^{
-//        NSLog(@"DIO SDK Initialized");
-//    } errorHandler:^(NSError *error) {
-//        NSLog(@"DIO SDK Initialization Fail");
-//    }];
 }
 
 - (IBAction)pressBannerButton:(id)sender {
@@ -73,6 +65,7 @@ NSString *interstitialID = @"09971374de5dc75a";
     self.interstitialAd.delegate = self;
 
     // Load the first ad
+    [ViewController addCustomAdRequestDataForInterstitial:self.interstitialAd forAdView:nil];
     [self.interstitialAd loadAd];
 }
 
@@ -80,6 +73,9 @@ NSString *interstitialID = @"09971374de5dc75a";
 {
     [self.adContainer.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
 
+    if (self.adView) {
+        [self.adView stopAutoRefresh];
+    }
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: unitID];
     self.adView.delegate = self;
 
@@ -90,9 +86,9 @@ NSString *interstitialID = @"09971374de5dc75a";
     [self.adContainer addSubview: self.adView];
 
     // Load the ad
+    [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
     [self.adView loadAd];
     self.adView.hidden = NO;
-//    [self.adView startAutoRefresh];
 }
 
 
@@ -178,6 +174,16 @@ NSString *interstitialID = @"09971374de5dc75a";
 
 - (void)updateFocusIfNeeded { 
     NSLog(@"updateFocusIfNeeded");
+}
+
++ (void)addCustomAdRequestDataForInterstitial:(nullable MAInterstitialAd *) interstitialAd forAdView:(nullable MAAdView *) adView {
+    DIOAdRequest* adRequest = [[DIOAdRequest alloc] init];
+    if (interstitialAd != nil) {
+        [interstitialAd setLocalExtraParameterForKey:@"dioAdRequest" value:adRequest];
+    }
+    if (adView != nil) {
+        [adView setLocalExtraParameterForKey:@"dioAdRequest" value:adRequest];
+    }
 }
 
 @end

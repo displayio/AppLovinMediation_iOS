@@ -21,6 +21,7 @@
 
 DIOAd *dioInterstitialAd;
 DIOAd *dioInlineAd;
+DIOAd *dioInlineAdImpressed;
 
 - (void)initializeWithParameters:(id<MAAdapterInitializationParameters>)parameters completionHandler:(void (^)(MAAdapterInitializationStatus, NSString * _Nullable))completionHandler
 {
@@ -29,7 +30,7 @@ DIOAd *dioInlineAd;
     [self log: @"Initializing DIO SDK adapter... "];
     completionHandler(MAAdapterInitializationStatusInitializing, nil);
     
-    [[DIOController sharedInstance] initializeWithProperties:nil appId:appID completionHandler:^{
+    [[DIOController sharedInstance] initializeWithAppId:appID completionHandler:^{
         completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
         [self log: @"DIO SDK Initialized"];
     } errorHandler:^(NSError *error) {
@@ -54,9 +55,9 @@ DIOAd *dioInlineAd;
         [dioInterstitialAd finish];
         dioInterstitialAd = nil;
     }
-    if (dioInlineAd != nil && dioInlineAd.impressed) {
-        [dioInlineAd finish];
-        dioInlineAd = nil;
+    if (dioInlineAdImpressed != nil) {
+        [dioInlineAdImpressed finish];
+        dioInlineAdImpressed = nil;
     }
 }
 
@@ -69,19 +70,24 @@ DIOAd *dioInlineAd;
         [delegate didFailToLoadInterstitialAdWithError:MAAdapterError.internalError];
         return;
     }
-    DIOAdRequest *adRequest = [placement newAdRequest];
+    DIOAdRequest *adRequest;
     
-    [adRequest requestAdWithAdReceivedHandler:^(DIOAdProvider *adProvider) {
-        [self log: @"AD RECEIVED"];
+    @try {
+        NSDictionary<NSString *, id> * localParams = [parameters localExtraParameters];
+        adRequest = localParams[DIO_AD_REQUEST];
+    } @catch (NSException *ignored) {
         
-        [adProvider loadAdWithLoadedHandler:^(DIOAd *ad) {
-            [self log: @"AD LOADED"];
-            dioInterstitialAd = ad;
-            [delegate didLoadInterstitialAd];
-        } failedHandler:^(NSError *error){
-            [self log: @"AD FAILED TO LOAD: %@", error.localizedDescription];
-            [delegate didFailToLoadInterstitialAdWithError:MAAdapterError.internalError];
-        }];
+    }
+    if (adRequest != nil) {
+        [placement addAdRequest: adRequest];
+    } else {
+        adRequest = [placement newAdRequest];
+    }
+    
+    [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
+        [self log: @"AD LOADED"];
+        dioInterstitialAd = ad;
+        [delegate didLoadInterstitialAd];
     } noAdHandler:^(NSError *error){
         [self log: @"NO AD: %@", error.localizedDescription];
         [delegate didFailToLoadInterstitialAdWithError:MAAdapterError.noFill];
@@ -134,11 +140,24 @@ DIOAd *dioInlineAd;
     NSString *placementId = parameters.thirdPartyAdPlacementIdentifier;
     
     DIOPlacement *placement = [[DIOController sharedInstance] placementWithId:placementId];
-    DIOAdRequest *adRequest = [placement newAdRequest];
+    DIOAdRequest *adRequest;
+    
+    @try {
+        NSDictionary<NSString *, id> * localParams = [parameters localExtraParameters];
+        adRequest = localParams[DIO_AD_REQUEST];
+    } @catch (NSException *ignored) {
+        
+    }
+    if (adRequest != nil) {
+        [placement addAdRequest: adRequest];
+    } else {
+        adRequest = [placement newAdRequest];
+    }
     
     if([placement isKindOfClass: DIOInterscrollerPlacement.class]) {
         DIOInterscrollerContainer *container = [[DIOInterscrollerContainer alloc] init];
         [container loadWithAdRequest:adRequest completionHandler:^(DIOAd *ad){
+            dioInlineAdImpressed = dioInlineAd;
             dioInlineAd = ad;
             [self handleInlineAdEvents:ad andNotify:delegate];
             UIView *adView = [container view];
@@ -151,21 +170,14 @@ DIOAd *dioInlineAd;
     } else if ([placement isKindOfClass: DIOInFeedPlacement.class]
                || [placement isKindOfClass: DIOMediumRectanglePlacement.class]
                || [placement isKindOfClass: DIOBannerPlacement.class]){
-        [adRequest requestAdWithAdReceivedHandler:^(DIOAdProvider *adProvider) {
-            [self log: @"AD RECEIVED"];
+        [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
+            [self log: @"AD LOADED"];
+            dioInlineAdImpressed = dioInlineAd;
+            dioInlineAd = ad;
+            [self handleInlineAdEvents:ad andNotify:delegate];
             
-            [adProvider loadAdWithLoadedHandler:^(DIOAd *ad) {
-                [self log: @"AD LOADED"];
-                dioInlineAd = ad;
-                [self handleInlineAdEvents:ad andNotify:delegate];
-                
-                UIView *adView = [ad view];
-                [delegate didLoadAdForAdView: adView];
-                
-            } failedHandler:^(NSError *error){
-                [self log: @"AD FAILED TO LOAD: %@", error.localizedDescription];
-                [delegate didFailToLoadAdViewAdWithError:MAAdapterError.internalError];
-            }];
+            UIView *adView = [ad view];
+            [delegate didLoadAdForAdView: adView];
         } noAdHandler:^(NSError *error){
             [self log: @"NO AD: %@", error.localizedDescription];
             [delegate didFailToLoadAdViewAdWithError:MAAdapterError.noFill];

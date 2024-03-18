@@ -18,12 +18,19 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    [ALSdk shared].mediationProvider = @"max";
-    [ALSdk shared].userIdentifier = @"SOME_USER_ID";
-    [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration *configuration) {
+//    [ALSdk shared].mediationProvider = @"max";
+//    [ALSdk shared].userIdentifier = @"SOME_USER_ID";
+//    [[ALSdk shared] initializeSdkWithCompletionHandler:^(ALSdkConfiguration *configuration) {
+//    }];
+    
+    ALSdkInitializationConfiguration *initConfig = [ALSdkInitializationConfiguration
+                                                    configurationWithSdkKey: @"Em8gDrZPoITWOz7bpmbygQ4zNdahVTBLK2bKsKzA7ZTgDproADG9WTuqRiMLeof9RTkTqzcTdXR55xGHNuMRDp" builderBlock:^(ALSdkInitializationConfigurationBuilder *builder) {
+      builder.mediationProvider = ALMediationProviderMAX;
+    }];
+
+    [[ALSdk shared] initializeWithConfiguration: initConfig completionHandler:^(ALSdkConfiguration *sdkConfig) {
         NSLog(@"=============== AppLovin SDK Initialized ===============");
     }];
-    
     return YES;
 }
 

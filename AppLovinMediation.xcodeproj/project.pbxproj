@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1EAF93492CCDCF1F8887FDB5 /* Pods_AppLovinMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F3E1E7AA74BF774B03CCCD0 /* Pods_AppLovinMediation.framework */; };
 		DB6226EC27FB249C009BAC58 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226EB27FB249C009BAC58 /* AppDelegate.m */; };
 		DB6226EF27FB249C009BAC58 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226EE27FB249C009BAC58 /* SceneDelegate.m */; };
 		DB6226F227FB249C009BAC58 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226F127FB249C009BAC58 /* ViewController.m */; };
@@ -17,6 +16,7 @@
 		DB6226FD27FB249E009BAC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226FC27FB249E009BAC58 /* main.m */; };
 		DB62272127FB66C1009BAC58 /* DisplayIOMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */; };
 		DBDDAF2E2AA090D6002C720D /* InterScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */; };
+		E26676A9AB5496E846E3EF00 /* Pods_AppLovinMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23413283BD2969B157A6F055 /* Pods_AppLovinMediation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,8 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2F3E1E7AA74BF774B03CCCD0 /* Pods_AppLovinMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovinMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8CD952348E881EC1C35BAB9B /* Pods-AppLovinMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovinMediation.debug.xcconfig"; path = "Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation.debug.xcconfig"; sourceTree = "<group>"; };
+		23413283BD2969B157A6F055 /* Pods_AppLovinMediation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AppLovinMediation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43FCA5647CF46AC47A3C028A /* Pods-AppLovinMediation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovinMediation.debug.xcconfig"; path = "Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation.debug.xcconfig"; sourceTree = "<group>"; };
+		6C224B33335EA0B871AB18B4 /* Pods-AppLovinMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovinMediation.release.xcconfig"; path = "Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation.release.xcconfig"; sourceTree = "<group>"; };
 		DB6226E727FB249C009BAC58 /* AppLovinMediation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppLovinMediation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6226EA27FB249C009BAC58 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		DB6226EB27FB249C009BAC58 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,7 +58,6 @@
 		DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayIOMediationAdapter.m; sourceTree = "<group>"; };
 		DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterScrollerViewController.m; sourceTree = "<group>"; };
 		DBDDAF2D2AA090D6002C720D /* InterScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterScrollerViewController.h; sourceTree = "<group>"; };
-		F5776FBE62F41E6F3DEE1F04 /* Pods-AppLovinMediation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AppLovinMediation.release.xcconfig"; path = "Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,7 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1EAF93492CCDCF1F8887FDB5 /* Pods_AppLovinMediation.framework in Frameworks */,
+				E26676A9AB5496E846E3EF00 /* Pods_AppLovinMediation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,19 +86,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1F76A2E6B2116DFFC061ACC5 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2F3E1E7AA74BF774B03CCCD0 /* Pods_AppLovinMediation.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		BE04331F8A67C5EDAA3342E7 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				8CD952348E881EC1C35BAB9B /* Pods-AppLovinMediation.debug.xcconfig */,
-				F5776FBE62F41E6F3DEE1F04 /* Pods-AppLovinMediation.release.xcconfig */,
+				43FCA5647CF46AC47A3C028A /* Pods-AppLovinMediation.debug.xcconfig */,
+				6C224B33335EA0B871AB18B4 /* Pods-AppLovinMediation.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -110,7 +102,7 @@
 				DB6226E927FB249C009BAC58 /* AppLovinMediation */,
 				DB6226E827FB249C009BAC58 /* Products */,
 				BE04331F8A67C5EDAA3342E7 /* Pods */,
-				1F76A2E6B2116DFFC061ACC5 /* Frameworks */,
+				F9A96FCC9D5AD918EE8985A9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -153,6 +145,14 @@
 			path = DIOAdapterAppLovin;
 			sourceTree = "<group>";
 		};
+		F9A96FCC9D5AD918EE8985A9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				23413283BD2969B157A6F055 /* Pods_AppLovinMediation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -160,12 +160,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = DB62271627FB249E009BAC58 /* Build configuration list for PBXNativeTarget "AppLovinMediation" */;
 			buildPhases = (
-				F10AF46C22D915641DE773B9 /* [CP] Check Pods Manifest.lock */,
+				64E86EFBDF3DA3756FB95E1F /* [CP] Check Pods Manifest.lock */,
 				DB6226E327FB249C009BAC58 /* Sources */,
 				DB6226E427FB249C009BAC58 /* Frameworks */,
 				DB6226E527FB249C009BAC58 /* Resources */,
-				86F9BCB0155F884AA256D145 /* [CP] Embed Pods Frameworks */,
-				677C5649E708753820D347BF /* [CP] Copy Pods Resources */,
+				9B0D037452F4D875AB6D0006 /* [CP] Embed Pods Frameworks */,
+				3603716DF4DDF7D20C86B64D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,7 +282,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		677C5649E708753820D347BF /* [CP] Copy Pods Resources */ = {
+		3603716DF4DDF7D20C86B64D /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -299,24 +299,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		86F9BCB0155F884AA256D145 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F10AF46C22D915641DE773B9 /* [CP] Check Pods Manifest.lock */ = {
+		64E86EFBDF3DA3756FB95E1F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -336,6 +319,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9B0D037452F4D875AB6D0006 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AppLovinMediation/Pods-AppLovinMediation-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -517,7 +517,7 @@
 		};
 		DB62271727FB249E009BAC58 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8CD952348E881EC1C35BAB9B /* Pods-AppLovinMediation.debug.xcconfig */;
+			baseConfigurationReference = 43FCA5647CF46AC47A3C028A /* Pods-AppLovinMediation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -545,7 +545,7 @@
 		};
 		DB62271827FB249E009BAC58 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F5776FBE62F41E6F3DEE1F04 /* Pods-AppLovinMediation.release.xcconfig */;
+			baseConfigurationReference = 6C224B33335EA0B871AB18B4 /* Pods-AppLovinMediation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
