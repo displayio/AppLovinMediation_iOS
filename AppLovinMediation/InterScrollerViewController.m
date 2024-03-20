@@ -7,8 +7,6 @@
 #import <AppLovinSDK/AppLovinSDK.h>
 
 
-static NSString *const interscrollerlID = @"33df6d2f311a2004";
-
 @interface InterScrollerViewController () <MAAdViewAdDelegate>
 
 @property (nonatomic, strong) MAAdView *adView;
@@ -26,21 +24,25 @@ static NSString *const interscrollerlID = @"33df6d2f311a2004";
     
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell1"];
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"Cell2"];
+    
+    [self createInlineAd];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
   [super viewDidAppear:animated];
-    [self createInlineAd];
 }
 
 - (void)createInlineAd {
-    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: interscrollerlID];
+    self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: self.adUnitID];
     self.adView.delegate = self;
-    
+    if ([self.adUnitType isEqual:@"IF"]) {
+        self.adView.frame = CGRectMake(0, 0, 300, 250);
+    }
     //must be set for ad unit at the AppLovin dashboard
     [self.adView stopAutoRefresh];
-    // Load the ad
+    //add custom ad request data (optional)
     [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
+    // Load the ad
     [self.adView loadAd];
     self.adView.hidden = NO;
 }
@@ -82,6 +84,9 @@ static NSString *const interscrollerlID = @"33df6d2f311a2004";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 25 && [self.adUnitType isEqual:@"IF"]) {
+        return 250;
+    }
     return UITableViewAutomaticDimension;
 }
 

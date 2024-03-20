@@ -8,16 +8,16 @@
 #import "ViewController.h"
 #import "InterScrollerViewController.h"
 #import <DIOSDK/DIOController.h>
+#import "DisplayIOMediationAdapter.h"
 
 
 @interface ViewController ()<MAAdViewAdDelegate, MAAdDelegate>
-@property (weak, nonatomic) IBOutlet UIView *adContainer;
 @property (weak, nonatomic) IBOutlet UIButton *bannerButton;
 @property (weak, nonatomic) IBOutlet UIButton *mRectButton;
 @property (weak, nonatomic) IBOutlet UIButton *inFeedButton;
 @property (weak, nonatomic) IBOutlet UIButton *interstitialButton;
 @property (weak, nonatomic) IBOutlet UIButton *interscrollerButton;
-
+@property (strong, nonatomic)  UIView *adContainer;
 @property (nonatomic, strong) MAAdView *adView;
 @property (nonatomic, strong) MAInterstitialAd *interstitialAd;
 
@@ -29,11 +29,15 @@ NSString *bannerID = @"e37f5572855feab1";
 NSString *mRectID = @"be4c536771ef3142";
 NSString *inFeedID = @"fce17514958843dd";
 NSString *interstitialID = @"88a2c8359162b418";
+NSString *interscrollerlID = @"33df6d2f311a2004";
+
 
 
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.adContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen.bounds), 300)];
+    [self.view addSubview: self.adContainer];
 }
 
 - (IBAction)pressBannerButton:(id)sender {
@@ -41,18 +45,22 @@ NSString *interstitialID = @"88a2c8359162b418";
 }
 - (IBAction)pressMediumRectButton:(id)sender {
     [self createInlineAd:mRectID];
-
 }
 - (IBAction)pressInFeedButton:(id)sender {
-    [self createInlineAd:inFeedID];
-
+    [self goToFeed:inFeedID type:@"IF"];
 }
 - (IBAction)pressInterstitialButton:(id)sender {
     [self createInterstitialAd];
 }
 
 - (IBAction)interscrollerButtonWasPressed:(id)sender {
+    [self goToFeed:interscrollerlID type:@"IS"];
+}
+
+- (void)goToFeed:(NSString*)adUnitID type: (NSString*)adUnitType{
     InterScrollerViewController *vc = [InterScrollerViewController new];
+    vc.adUnitID = adUnitID;
+    vc.adUnitType = adUnitType;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];
     navigationController.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
     navigationController.modalPresentationStyle = UIModalPresentationFullScreen;
@@ -71,19 +79,25 @@ NSString *interstitialID = @"88a2c8359162b418";
 
 - (void)createInlineAd:(NSString*)unitID
 {
-    [self.adContainer.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
-
     if (self.adView) {
         [self.adView stopAutoRefresh];
+        [self.adView removeFromSuperview];
+        self.adView.delegate = nil;
+        self.adView = nil;
     }
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: unitID];
     self.adView.delegate = self;
+    [self.adView setMultipleTouchEnabled:YES];
+    [self.adView setUserInteractionEnabled:YES];
 
-    CGFloat height = 250;
-    CGFloat width = CGRectGetWidth(UIScreen.mainScreen.bounds);
-    self.adView.frame = CGRectMake(0, 0, width, height);
     self.adView.backgroundColor = UIColor.cyanColor;
     [self.adContainer addSubview: self.adView];
+    self.adView.translatesAutoresizingMaskIntoConstraints = NO;
+    [self.adView.topAnchor constraintEqualToAnchor:self.adContainer.topAnchor constant:50].active = YES;
+    [self.adView.bottomAnchor constraintEqualToAnchor:self.adContainer.bottomAnchor].active = YES;
+    [self.adView.trailingAnchor constraintEqualToAnchor:self.adContainer.trailingAnchor].active = YES;
+    [self.adView.leadingAnchor constraintEqualToAnchor:self.adContainer.leadingAnchor].active = YES;
+
 
     // Load the ad
     [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
@@ -107,7 +121,6 @@ NSString *interstitialID = @"88a2c8359162b418";
 - (void)didFailToLoadAdForAdUnitIdentifier:(nonnull NSString *)adUnitIdentifier withError:(nonnull MAError *)error { 
     NSLog(@"didFailToLoadAdForAdUnitIdentifier");
     NSLog(@"Error: %@", error.message);
-
 }
 
 - (void)didHideAd:(nonnull MAAd *)ad { 
@@ -179,10 +192,10 @@ NSString *interstitialID = @"88a2c8359162b418";
 + (void)addCustomAdRequestDataForInterstitial:(nullable MAInterstitialAd *) interstitialAd forAdView:(nullable MAAdView *) adView {
     DIOAdRequest* adRequest = [[DIOAdRequest alloc] init];
     if (interstitialAd != nil) {
-        [interstitialAd setLocalExtraParameterForKey:@"dioAdRequest" value:adRequest];
+        [interstitialAd setLocalExtraParameterForKey:DIO_AD_REQUEST value:adRequest];
     }
     if (adView != nil) {
-        [adView setLocalExtraParameterForKey:@"dioAdRequest" value:adRequest];
+        [adView setLocalExtraParameterForKey:DIO_AD_REQUEST value:adRequest];
     }
 }
 
