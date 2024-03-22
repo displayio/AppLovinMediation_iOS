@@ -25,7 +25,11 @@ DIOAd *dioInlineAdImpressed;
 
 - (void)initializeWithParameters:(id<MAAdapterInitializationParameters>)parameters completionHandler:(void (^)(MAAdapterInitializationStatus, NSString * _Nullable))completionHandler
 {
-    
+    if ( [[DIOController sharedInstance] initialized]) {
+        completionHandler(MAAdapterInitializationStatusInitializedSuccess, nil);
+        [self log: @"DIO SDK Initialized"];
+        return;
+    }
     NSString* appID =  parameters.serverParameters[@"app_id"];
     [self log: @"Initializing DIO SDK adapter... "];
     completionHandler(MAAdapterInitializationStatusInitializing, nil);
