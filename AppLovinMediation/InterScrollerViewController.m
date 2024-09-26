@@ -34,6 +34,7 @@
 
 - (void)createInlineAd {
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: self.adUnitID];
+    self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.adView.delegate = self;
     if ([self.adUnitType isEqual:@"IF"]) {
         self.adView.frame = CGRectMake(0, 0, 300, 250);
@@ -49,7 +50,7 @@
 
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
-    [[DIOController sharedInstance] finishAllAds];
+//    [[DIOController sharedInstance] finishAllAds];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -121,6 +122,14 @@
     NSLog(@"ad.networkName: %@", ad.networkName);
     NSLog(@"ad.networkPlacement: %@", ad.networkPlacement);
     NSLog(@"didLoadAd");
+    NSLog(@"adView:  %@", _adView);
+
+//    if ([self.adUnitType isEqual:@"IF"]) {
+//        self.adView.frame = CGRectMake(0, 0, 300, 250);
+//    }
+//    if ([self.adUnitType isEqual:@"IS"]) {
+//        self.adView.frame = CGRectMake(0, 0, 1300, 1250);
+//    }
 }
 
 - (void)didCollapseAd:(nonnull MAAd *)ad {
