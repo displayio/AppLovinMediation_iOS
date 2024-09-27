@@ -36,21 +36,11 @@
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: self.adUnitID];
     self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.adView.delegate = self;
-    if ([self.adUnitType isEqual:@"IF"]) {
-        self.adView.frame = CGRectMake(0, 0, 300, 250);
-    }
-    //must be set for ad unit at the AppLovin dashboard
-    [self.adView stopAutoRefresh];
     //add custom ad request data (optional)
     [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
     // Load the ad
     [self.adView loadAd];
     self.adView.hidden = NO;
-}
-
-- (void)viewWillDisappear:(BOOL)animated {
-    [super viewWillDisappear:animated];
-//    [[DIOController sharedInstance] finishAllAds];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -93,6 +83,7 @@
 
 - (void)close:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+    [[DIOController sharedInstance] finishAllAds];
 }
 
 #pragma mark MAAdViewAdDelegate implementation
@@ -102,6 +93,10 @@
 
 - (void)didDisplayAd:(nonnull MAAd *)ad {
     NSLog(@"didDisplayAd");
+    //must be set for ad unit at the AppLovin dashboard
+    if ([ad.networkName isEqual:@"DisplayIO"]) {
+        [self.adView stopAutoRefresh];  //IMPORTANT: Intersroller ads should not use AutoRefresh
+    }
 }
 
 - (void)didFailToDisplayAd:(nonnull MAAd *)ad withError:(nonnull MAError *)error {
@@ -123,13 +118,6 @@
     NSLog(@"ad.networkPlacement: %@", ad.networkPlacement);
     NSLog(@"didLoadAd");
     NSLog(@"adView:  %@", _adView);
-
-//    if ([self.adUnitType isEqual:@"IF"]) {
-//        self.adView.frame = CGRectMake(0, 0, 300, 250);
-//    }
-//    if ([self.adUnitType isEqual:@"IS"]) {
-//        self.adView.frame = CGRectMake(0, 0, 1300, 1250);
-//    }
 }
 
 - (void)didCollapseAd:(nonnull MAAd *)ad {
