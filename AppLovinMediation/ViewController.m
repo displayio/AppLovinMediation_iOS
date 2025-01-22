@@ -17,6 +17,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *inFeedButton;
 @property (weak, nonatomic) IBOutlet UIButton *interstitialButton;
 @property (weak, nonatomic) IBOutlet UIButton *interscrollerButton;
+@property (weak, nonatomic) IBOutlet UIButton *inlineButton;
 @property (strong, nonatomic)  UIView *adContainer;
 @property (nonatomic, strong) MAAdView *adView;
 @property (nonatomic, strong) MAInterstitialAd *interstitialAd;
@@ -30,6 +31,7 @@ NSString *mRectID = @"be4c536771ef3142";
 NSString *inFeedID = @"fce17514958843dd";
 NSString *interstitialID = @"88a2c8359162b418";
 NSString *interscrollerlID = @"33df6d2f311a2004";
+NSString *inlineID = @"17611d32a7cad853";
 
 
 
@@ -57,6 +59,10 @@ NSString *interscrollerlID = @"33df6d2f311a2004";
     [self goToFeed:interscrollerlID type:@"IS"];
 }
 
+- (IBAction)inlineButtonWasPressed:(id)sender {
+    [self goToFeed:interscrollerlID type:@"IL"];
+}
+
 - (void)goToFeed:(NSString*)adUnitID type: (NSString*)adUnitType{
     InterScrollerViewController *vc = [InterScrollerViewController new];
     vc.adUnitID = adUnitID;
@@ -69,8 +75,10 @@ NSString *interscrollerlID = @"33df6d2f311a2004";
 
 - (void)createInterstitialAd
 {
-    self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: interstitialID];
-    self.interstitialAd.delegate = self;
+    if (!self.interstitialAd) {
+        self.interstitialAd = [[MAInterstitialAd alloc] initWithAdUnitIdentifier: interstitialID];
+        self.interstitialAd.delegate = self;
+    }
 
     // Load the first ad
     [ViewController addCustomAdRequestDataForInterstitial:self.interstitialAd forAdView:nil];
@@ -80,7 +88,7 @@ NSString *interscrollerlID = @"33df6d2f311a2004";
 - (void)createInlineAd:(NSString*)unitID
 {
     if (self.adView) {
-        [self.adView stopAutoRefresh];
+//        [self.adView stopAutoRefresh];
         [self.adView removeFromSuperview];
         self.adView.delegate = nil;
         self.adView = nil;

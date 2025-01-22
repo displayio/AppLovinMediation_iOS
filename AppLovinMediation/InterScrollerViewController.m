@@ -95,7 +95,7 @@
     NSLog(@"didDisplayAd");
     //must be set for ad unit at the AppLovin dashboard
     if ([ad.networkName isEqual:@"DisplayIO"]) {
-        [self.adView stopAutoRefresh];  //IMPORTANT: Intersroller ads should not use AutoRefresh
+//        [self.adView stopAutoRefresh];  //IMPORTANT: Intersroller ads should not use AutoRefresh
     }
 }
 
@@ -118,6 +118,9 @@
     NSLog(@"ad.networkPlacement: %@", ad.networkPlacement);
     NSLog(@"didLoadAd");
     NSLog(@"adView:  %@", _adView);
+    if ([ad.networkName isEqual:@"DisplayIO"]) {
+//        [self.tableView reloadData];
+    }
 }
 
 - (void)didCollapseAd:(nonnull MAAd *)ad {

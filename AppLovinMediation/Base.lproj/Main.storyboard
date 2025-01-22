@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22155" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -112,6 +112,26 @@
                                     <action selector="interscrollerButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0hj-kS-7mg"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tfd-PH-ksP">
+                                <rect key="frame" x="20" y="624" width="374" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Inline">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="0.25819232406983994" blue="0.205451906193998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="20" name="Helvetica"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="inlineButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nbH-dr-Sn5"/>
+                                    <action selector="interscrollerButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7CI-21-YkK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -119,6 +139,7 @@
                     <connections>
                         <outlet property="bannerButton" destination="odw-Mi-Am1" id="rKH-Wk-vWs"/>
                         <outlet property="inFeedButton" destination="QM4-Eg-neX" id="2rY-3L-eVv"/>
+                        <outlet property="inlineButton" destination="Tfd-PH-ksP" id="qqq-e6-h7Q"/>
                         <outlet property="interscrollerButton" destination="b3D-wQ-9WI" id="54s-sc-Clt"/>
                         <outlet property="interstitialButton" destination="57x-dQ-AvW" id="jUF-cf-y0n"/>
                         <outlet property="mRectButton" destination="AA6-MF-oKH" id="hnr-z0-16j"/>
