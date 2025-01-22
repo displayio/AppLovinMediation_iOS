@@ -4,7 +4,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface InterScrollerViewController : UITableViewController
+@interface InlineViewController : UITableViewController
 
 @property (nonatomic, strong) NSString *adUnitID;
 @property (nonatomic, strong) NSString *adUnitType;

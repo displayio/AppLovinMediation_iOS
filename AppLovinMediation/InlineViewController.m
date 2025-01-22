@@ -1,19 +1,19 @@
 
 
 #import "ViewController.h"
-#import "InterScrollerViewController.h"
+#import "InlineViewController.h"
 #import <DIOSDK/DIOController.h>
 #import <DIOSDK/DIOInterscrollerView.h>
 #import <AppLovinSDK/AppLovinSDK.h>
 
 
-@interface InterScrollerViewController () <MAAdViewAdDelegate>
+@interface InlineViewController () <MAAdViewAdDelegate>
 
 @property (nonatomic, strong) MAAdView *adView;
 
 @end
 
-@implementation InterScrollerViewController
+@implementation InlineViewController
 
 
 - (void)viewDidLoad {
@@ -75,9 +75,9 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 25 && [self.adUnitType isEqual:@"IF"]) {
-        return 250;
-    }
+//    if (indexPath.row == 25 && [self.adUnitType isEqual:@"IF"]) {
+//        return 250;
+//    }
     return UITableViewAutomaticDimension;
 }
 
@@ -95,7 +95,9 @@
     NSLog(@"didDisplayAd");
     //must be set for ad unit at the AppLovin dashboard
     if ([ad.networkName isEqual:@"DisplayIO"]) {
-//        [self.adView stopAutoRefresh];  //IMPORTANT: Intersroller ads should not use AutoRefresh
+        if ([self.adUnitType isEqual:@"IS"] || [self.adUnitType isEqual:@"IL"]) {
+            [self.adView stopAutoRefresh];  //IMPORTANT: Intersroller ads should not use AutoRefresh
+        }
     }
 }
 

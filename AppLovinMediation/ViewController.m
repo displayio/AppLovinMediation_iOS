@@ -6,7 +6,7 @@
 //
 
 #import "ViewController.h"
-#import "InterScrollerViewController.h"
+#import "InlineViewController.h"
 #import <DIOSDK/DIOController.h>
 #import "DisplayIOMediationAdapter.h"
 
@@ -60,11 +60,11 @@ NSString *inlineID = @"17611d32a7cad853";
 }
 
 - (IBAction)inlineButtonWasPressed:(id)sender {
-    [self goToFeed:interscrollerlID type:@"IL"];
+    [self goToFeed:inlineID type:@"IL"];
 }
 
 - (void)goToFeed:(NSString*)adUnitID type: (NSString*)adUnitType{
-    InterScrollerViewController *vc = [InterScrollerViewController new];
+    InlineViewController *vc = [InlineViewController new];
     vc.adUnitID = adUnitID;
     vc.adUnitType = adUnitType;
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:vc];

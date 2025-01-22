@@ -15,7 +15,7 @@
 		DB6226FA27FB249E009BAC58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6226F827FB249E009BAC58 /* LaunchScreen.storyboard */; };
 		DB6226FD27FB249E009BAC58 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DB6226FC27FB249E009BAC58 /* main.m */; };
 		DB62272127FB66C1009BAC58 /* DisplayIOMediationAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */; };
-		DBDDAF2E2AA090D6002C720D /* InterScrollerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */; };
+		DBDDAF2E2AA090D6002C720D /* InlineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DBDDAF2C2AA090D5002C720D /* InlineViewController.m */; };
 		E26676A9AB5496E846E3EF00 /* Pods_AppLovinMediation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23413283BD2969B157A6F055 /* Pods_AppLovinMediation.framework */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +56,8 @@
 		DB62270C27FB249E009BAC58 /* AppLovinMediationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AppLovinMediationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB62271F27FB66C1009BAC58 /* DisplayIOMediationAdapter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayIOMediationAdapter.h; sourceTree = "<group>"; };
 		DB62272027FB66C1009BAC58 /* DisplayIOMediationAdapter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayIOMediationAdapter.m; sourceTree = "<group>"; };
-		DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterScrollerViewController.m; sourceTree = "<group>"; };
-		DBDDAF2D2AA090D6002C720D /* InterScrollerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterScrollerViewController.h; sourceTree = "<group>"; };
+		DBDDAF2C2AA090D5002C720D /* InlineViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InlineViewController.m; sourceTree = "<group>"; };
+		DBDDAF2D2AA090D6002C720D /* InlineViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InlineViewController.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,8 +125,8 @@
 				DB6226EE27FB249C009BAC58 /* SceneDelegate.m */,
 				DB6226F027FB249C009BAC58 /* ViewController.h */,
 				DB6226F127FB249C009BAC58 /* ViewController.m */,
-				DBDDAF2D2AA090D6002C720D /* InterScrollerViewController.h */,
-				DBDDAF2C2AA090D5002C720D /* InterScrollerViewController.m */,
+				DBDDAF2D2AA090D6002C720D /* InlineViewController.h */,
+				DBDDAF2C2AA090D5002C720D /* InlineViewController.m */,
 				DB6226F327FB249C009BAC58 /* Main.storyboard */,
 				DB6226F627FB249E009BAC58 /* Assets.xcassets */,
 				DB6226F827FB249E009BAC58 /* LaunchScreen.storyboard */,
@@ -348,7 +348,7 @@
 				DB62272127FB66C1009BAC58 /* DisplayIOMediationAdapter.m in Sources */,
 				DB6226F227FB249C009BAC58 /* ViewController.m in Sources */,
 				DB6226EC27FB249C009BAC58 /* AppDelegate.m in Sources */,
-				DBDDAF2E2AA090D6002C720D /* InterScrollerViewController.m in Sources */,
+				DBDDAF2E2AA090D6002C720D /* InlineViewController.m in Sources */,
 				DB6226FD27FB249E009BAC58 /* main.m in Sources */,
 				DB6226EF27FB249C009BAC58 /* SceneDelegate.m in Sources */,
 			);
