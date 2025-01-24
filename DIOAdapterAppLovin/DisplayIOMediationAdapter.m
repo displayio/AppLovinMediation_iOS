@@ -153,17 +153,20 @@ DIOAd *dioInlineAdImpressed;
     } @catch (NSException *ignored) {
         
     }
-    if (adRequest != nil) {
-        [placement addAdRequest: adRequest];
-    } else {
+
+    if (adRequest == nil) {
         adRequest = [placement newAdRequest];
+    } else {
+        DIOAdRequest* existed = [placement adRequestById:adRequest.ID];
+        if (existed) {
+            adRequest = [placement newAdRequest];
+        } else {
+            [placement addAdRequest:adRequest];
+        }
     }
-    
     [adRequest setMediationPlatform:DIOMediationPlatformAppLovin];
     [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
         [self log: @"AD LOADED"];
-        NSLog(@"=== DIO LOADED with requestID === %@", ad.requestId);
-
         dioInlineAdImpressed = dioInlineAd;
         dioInlineAd = ad;
         [self handleInlineAdEvents:ad andNotify:delegate];
@@ -184,8 +187,6 @@ DIOAd *dioInlineAdImpressed;
     [ad setEventHandler:^(DIOAdEvent event) {
         switch (event) {
             case DIOAdEventOnShown:
-                NSLog(@"=== DIO IMPRESSION for requestID === %@", reqID);
-
                 [inlineDelegate didDisplayAdViewAd];
                 break;
             case DIOAdEventOnFailedToShow:{
