@@ -37,7 +37,7 @@
     self.adView.translatesAutoresizingMaskIntoConstraints = NO;
     self.adView.delegate = self;
     //add custom ad request data (optional)
-    [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
+//    [ViewController addCustomAdRequestDataForInterstitial:nil forAdView:self.adView];
     // Load the ad
     [self.adView loadAd];
     self.adView.hidden = NO;
