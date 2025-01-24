@@ -162,6 +162,8 @@ DIOAd *dioInlineAdImpressed;
     [adRequest setMediationPlatform:DIOMediationPlatformAppLovin];
     [adRequest requestAdWithAdReceivedHandler:^(DIOAd *ad) {
         [self log: @"AD LOADED"];
+        NSLog(@"=== DIO LOADED with requestID === %@", ad.requestId);
+
         dioInlineAdImpressed = dioInlineAd;
         dioInlineAd = ad;
         [self handleInlineAdEvents:ad andNotify:delegate];
@@ -178,10 +180,12 @@ DIOAd *dioInlineAdImpressed;
     if(ad == nil || inlineDelegate == nil) {
         return;
     }
-    
+    NSString* reqID = ad.requestId;
     [ad setEventHandler:^(DIOAdEvent event) {
         switch (event) {
             case DIOAdEventOnShown:
+                NSLog(@"=== DIO IMPRESSION for requestID === %@", reqID);
+
                 [inlineDelegate didDisplayAdViewAd];
                 break;
             case DIOAdEventOnFailedToShow:{
