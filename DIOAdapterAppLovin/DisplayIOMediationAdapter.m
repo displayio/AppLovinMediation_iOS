@@ -265,7 +265,6 @@ DIOAd *dioInlineAdImpressed;
     if(ad == nil || inlineDelegate == nil) {
         return;
     }
-    NSString* reqID = ad.requestId;
     [ad setEventHandler:^(DIOAdEvent event) {
         switch (event) {
             case DIOAdEventOnShown:
@@ -281,6 +280,7 @@ DIOAd *dioInlineAdImpressed;
             case DIOAdEventOnClosed:
                 [inlineDelegate didHideAdViewAd];
                 break;
+            case DIOAdEventOnAdStarted:
             case DIOAdEventOnAdCompleted:
             case DIOAdEventOnSwipedOut:
             case DIOAdEventOnSnapped:
