@@ -11,16 +11,18 @@
 #import "DisplayIOMediationAdapter.h"
 
 
-@interface ViewController ()<MAAdViewAdDelegate, MAAdDelegate>
+@interface ViewController ()<MAAdViewAdDelegate, MAAdDelegate, MARewardedAdDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *bannerButton;
 @property (weak, nonatomic) IBOutlet UIButton *mRectButton;
 @property (weak, nonatomic) IBOutlet UIButton *inFeedButton;
 @property (weak, nonatomic) IBOutlet UIButton *interstitialButton;
 @property (weak, nonatomic) IBOutlet UIButton *interscrollerButton;
 @property (weak, nonatomic) IBOutlet UIButton *inlineButton;
+@property (weak, nonatomic) IBOutlet UIButton *rvButton;
 @property (strong, nonatomic)  UIView *adContainer;
 @property (nonatomic, strong) MAAdView *adView;
 @property (nonatomic, strong) MAInterstitialAd *interstitialAd;
+@property (nonatomic, strong) MARewardedAd *rvAd;
 
 @end
 
@@ -32,6 +34,7 @@ NSString *inFeedID = @"fce17514958843dd";
 NSString *interstitialID = @"88a2c8359162b418";
 NSString *interscrollerlID = @"33df6d2f311a2004";
 NSString *inlineID = @"17611d32a7cad853";
+NSString *rvID = @"140a474097abb735";
 
 
 
@@ -63,6 +66,10 @@ NSString *inlineID = @"17611d32a7cad853";
     [self goToFeed:inlineID type:@"IL"];
 }
 
+- (IBAction)rvButtonWasPressed:(id)sender {
+    [self createRVAd];
+}
+
 - (void)goToFeed:(NSString*)adUnitID type: (NSString*)adUnitType{
     InlineViewController *vc = [InlineViewController new];
     vc.adUnitID = adUnitID;
@@ -83,6 +90,17 @@ NSString *inlineID = @"17611d32a7cad853";
     // Load the first ad
     [ViewController addCustomAdRequestDataForInterstitial:self.interstitialAd forAdView:nil];
     [self.interstitialAd loadAd];
+}
+
+- (void)createRVAd
+{
+    if (!self.rvAd) {
+        self.rvAd = [MARewardedAd sharedWithAdUnitIdentifier: rvID];
+        self.rvAd.delegate = self;
+    }
+
+    // Load the first ad
+    [self.rvAd loadAd];
 }
 
 - (void)createInlineAd:(NSString*)unitID
@@ -141,6 +159,10 @@ NSString *inlineID = @"17611d32a7cad853";
     {
         [self.interstitialAd showAd];
     }
+    if ( self.rvAd != nil && [self.rvAd isReady] )
+    {
+        [self.rvAd showAd];
+    }
 }
 
 - (void)didCollapseAd:(nonnull MAAd *)ad { 
@@ -195,6 +217,13 @@ NSString *inlineID = @"17611d32a7cad853";
 
 - (void)updateFocusIfNeeded { 
     NSLog(@"updateFocusIfNeeded");
+}
+
+#pragma mark - MARewardedAdDelegate Protocol
+
+- (void)didRewardUserForAd:(MAAd *)ad withReward:(MAReward *)reward
+{
+    NSLog(@"didRewardUserForAd: label: %@,  amount: %ld", reward.label, (long)reward.amount);
 }
 
 + (void)addCustomAdRequestDataForInterstitial:(nullable MAInterstitialAd *) interstitialAd forAdView:(nullable MAAdView *) adView {
