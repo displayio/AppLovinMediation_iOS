@@ -174,10 +174,40 @@
             filePath = "DIOAdapterAppLovin/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "177"
-            endingLineNumber = "177"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
             landmarkName = "-loadRewardedAdForParameters:andNotify:"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8585C015-7870-4E18-A3C3-0E9CC14E98A4 - 4ad104dcfca1409e"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[DisplayIOMediationAdapter loadRewardedAdForParameters:andNotify:]_block_invoke_2"
+                  moduleName = "AppLovinMediation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romando/Desktop/iOSWork/AppLovin_iOS/DIOAdapterAppLovin/DisplayIOMediationAdapter.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178">
+               </Location>
+               <Location
+                  uuid = "8585C015-7870-4E18-A3C3-0E9CC14E98A4 - 3cc36e532b434697"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__67-[DisplayIOMediationAdapter loadRewardedAdForParameters:andNotify:]_block_invoke.45"
+                  moduleName = "AppLovinMediation"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/romando/Desktop/iOSWork/AppLovin_iOS/DIOAdapterAppLovin/DisplayIOMediationAdapter.m"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "178"
+                  endingLineNumber = "178">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -200,14 +230,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6F81A9EC-DC92-4C89-BC10-EBBB8A52561D"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIOAdapterAppLovin/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "209"
-            endingLineNumber = "209"
+            startingLineNumber = "210"
+            endingLineNumber = "210"
             landmarkName = "-showRewardedAdForParameters:andNotify:"
             landmarkType = "7">
          </BreakpointContent>
@@ -216,14 +246,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "3145B50E-1EF0-4904-9FDC-9AF6D5334436"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DIOAdapterAppLovin/DisplayIOMediationAdapter.m"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
+            startingLineNumber = "207"
+            endingLineNumber = "207"
             landmarkName = "-showRewardedAdForParameters:andNotify:"
             landmarkType = "7">
          </BreakpointContent>
