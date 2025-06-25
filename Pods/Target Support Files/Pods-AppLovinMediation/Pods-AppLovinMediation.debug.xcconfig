@@ -1,11 +1,12 @@
 CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = NO
 EMBEDDED_CONTENT_CONTAINS_SWIFT = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-12.3.1" "${PODS_ROOT}/DIOSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AppLovinSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/DIOSDK"
+EXCLUDED_ARCHS[sdk=iphonesimulator*] = i386
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/AppLovinSDK/applovin-ios-sdk-12.3.1" "${PODS_ROOT}/DIOFacebookAdapter" "${PODS_ROOT}/DIOSDK" "${PODS_ROOT}/FBAudienceNetwork/Static" "${PODS_XCFRAMEWORKS_BUILD_DIR}/AppLovinSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/DIOFacebookAdapter" "${PODS_XCFRAMEWORKS_BUILD_DIR}/DIOSDK" "${PODS_XCFRAMEWORKS_BUILD_DIR}/FBAudienceNetwork"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) /usr/lib/swift '@executable_path/Frameworks' '@loader_path/Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${TOOLCHAIN_DIR}/usr/lib/swift/${PLATFORM_NAME}" /usr/lib/swift
-OTHER_LDFLAGS = $(inherited) -ObjC -l"z" -framework "AVFoundation" -framework "AdSupport" -framework "AppLovinSDK" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreMedia" -framework "CoreMotion" -framework "CoreTelephony" -framework "DIOSDK" -framework "MessageUI" -framework "SafariServices" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "AppTrackingTransparency"
-OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AppLovinSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/DIOSDK"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"c++" -l"xml2" -l"z" -framework "AVFoundation" -framework "AdSupport" -framework "AppLovinSDK" -framework "AppTrackingTransparency" -framework "AudioToolbox" -framework "CFNetwork" -framework "CoreGraphics" -framework "CoreImage" -framework "CoreMedia" -framework "CoreMotion" -framework "CoreTelephony" -framework "DIOFacebookAdapter" -framework "DIOSDK" -framework "FBAudienceNetwork" -framework "Foundation" -framework "MessageUI" -framework "SafariServices" -framework "Security" -framework "StoreKit" -framework "SystemConfiguration" -framework "UIKit" -framework "WebKit" -weak_framework "AdSupport" -weak_framework "AppTrackingTransparency" -weak_framework "CFNetwork" -weak_framework "CoreMotion" -weak_framework "CoreTelephony" -weak_framework "LocalAuthentication" -weak_framework "SafariServices" -weak_framework "SystemConfiguration" -weak_framework "VideoToolbox" -weak_framework "WebKit"
+OTHER_MODULE_VERIFIER_FLAGS = $(inherited) "-F${PODS_CONFIGURATION_BUILD_DIR}/AppLovinSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/DIOFacebookAdapter" "-F${PODS_CONFIGURATION_BUILD_DIR}/DIOSDK" "-F${PODS_CONFIGURATION_BUILD_DIR}/FBAudienceNetwork"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

@@ -1,20 +1,28 @@
 PODS:
   - AppLovinSDK (12.3.1)
-  - DIOSDK (4.3.4)
+  - DIOFacebookAdapter (4.4.0):
+    - FBAudienceNetwork
+  - DIOSDK (4.4.0):
+    - DIOFacebookAdapter (= 4.4.0)
+  - FBAudienceNetwork (6.20.0)
 
 DEPENDENCIES:
   - AppLovinSDK
-  - DIOSDK (= 4.3.4)
+  - DIOSDK (= 4.4.0)
 
 SPEC REPOS:
   trunk:
     - AppLovinSDK
+    - DIOFacebookAdapter
     - DIOSDK
+    - FBAudienceNetwork
 
 SPEC CHECKSUMS:
   AppLovinSDK: d99a5a32b00e844932f4583f863780e1af835722
-  DIOSDK: 4f25e1d8b25beb0e103c5ec8e08f00657267bb69
+  DIOFacebookAdapter: 6c6cc4056aa0824bdf3b12b75b2033ff7c99b3cd
+  DIOSDK: d87765174e2f09773bfc24ae811ccc0648bfcba3
+  FBAudienceNetwork: 51d3681e66c00ee36811c0d96e9fa39d5673eba8
 
-PODFILE CHECKSUM: c8a16f2d79a42719404c6128f88e802382608750
+PODFILE CHECKSUM: e6b60589d23ab35f11d75b70ef683fdab2cb4c1f
 
 COCOAPODS: 1.16.2

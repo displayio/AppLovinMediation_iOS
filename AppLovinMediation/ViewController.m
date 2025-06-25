@@ -4,7 +4,7 @@
 //
 //  Created by Ro Do on 04.04.2022.
 //
-
+#import <AppTrackingTransparency/AppTrackingTransparency.h>
 #import "ViewController.h"
 #import "InlineViewController.h"
 #import <DIOSDK/DIOController.h>
@@ -41,6 +41,12 @@ NSString *rvID = @"140a474097abb735";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [super viewDidLoad];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [ATTrackingManager requestTrackingAuthorizationWithCompletionHandler:^(ATTrackingManagerAuthorizationStatus status) {
+            NSLog(@"ATT STATUS = %ld", (long)status);
+        }];
+    });
     self.adContainer = [[UIView alloc] initWithFrame:CGRectMake(0, 0, CGRectGetWidth(UIScreen.mainScreen.bounds), 300)];
     [self.view addSubview: self.adContainer];
 }
