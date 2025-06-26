@@ -28,10 +28,6 @@
     [self createInlineAd];
 }
 
-- (void)viewDidAppear:(BOOL)animated {
-  [super viewDidAppear:animated];
-}
-
 - (void)createInlineAd {
     self.adView = [[MAAdView alloc] initWithAdUnitIdentifier: self.adUnitID];
     self.adView.translatesAutoresizingMaskIntoConstraints = NO;
